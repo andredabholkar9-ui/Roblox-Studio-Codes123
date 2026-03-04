@@ -1,0 +1,11 @@
+local sprint = false
+
+script.Parent.MouseButton1Down:Connect(function()
+
+	local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+	if not humanoid then return end
+
+	sprint = not sprint
+
+	humanoid.WalkSpeed = sprint and 32 or 16
+end)
